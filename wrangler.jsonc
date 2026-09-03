@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "vku-field-survey-pwa",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-09-03",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "vku-field-survey",
+      "database_id": "efb03b03-8b24-4ddb-bec0-a9220866e63e"
+    }
+  ]
+}
